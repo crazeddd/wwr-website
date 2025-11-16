@@ -6,7 +6,6 @@ import "./styles/index.css";
 
 import NotFound from "./routes/NotFound";
 import App from "./routes/App";
-import Apply from "./routes/Apply";
 import FRC from "./routes/FRC";
 import FTC from "./routes/FTC";
 import Robocamp from "./routes/Robocamp";
@@ -25,7 +24,6 @@ render(
   () => (
     <Router>
       <Route path="/" component={App} />
-      <Route path="/apply" component={Apply} />
       <Route path="/frc" component={FRC} />
       <Route path="/ftc" component={FTC} />
       <Route path="/robocamp" component={Robocamp} />

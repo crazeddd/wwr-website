@@ -1,6 +1,6 @@
 ## The *New* Westwood Robotics Site
 
-Built with SolidJs and Bun.
+Built with SolidJs.
 
 ## Progress 
 
@@ -14,9 +14,7 @@ Built with SolidJs and Bun.
 
 ## Development
 
-Prereqs: Make sure you have [Bun installed](https://bun.com/docs/installation).
-
-Then run the following the in the project root: `bun i; bun dev`
+Then run the following the in the project root: `npm i; npm run dev`
 
 ## Contributing/Suggestions
 

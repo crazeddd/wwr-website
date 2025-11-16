@@ -10,7 +10,7 @@ const Nav: Component = () => {
       <div class="flex justify-start align-center">
         <a href="/">{logo()}</a>
       </div>
-      <div class="flex justify-between align-center">
+      <div class="flex justify-between align-center desktop-only">
         <div class="dropdown">
           <button>Programs {cheveron_down()}</button>
           <div class="gap"></div> {/*lazy*/}

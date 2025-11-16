@@ -10,7 +10,7 @@ import Nav from "./components/Nav";
 import { typeWriter } from "../utils/typeWriter";
 
 const App: Component = () => {
-  const wordList = ["Robots", "Memories", "Stuff"];
+  const wordList = ["Robots", "Memories", "Solutions"];
   const { word, typeWord, deleteWord, clearWord } = typeWriter(200, 150);
 
   createEffect(async () => {
@@ -23,6 +23,7 @@ const App: Component = () => {
       i = i > 1 ? 0 : i + 1;
     }
   });
+
   return (
     <>
       <section id="hero">
@@ -38,15 +39,15 @@ const App: Component = () => {
               <span class="badge">Build 2.343</span>
             </div>
             <h1>
-              The <span class="txt-ul txt-i txt-acc">future</span> of{" "}
-              <span class="txt-ul txt-i txt-acc">robotics</span> is here.
+              Bringing <span class="txt-ul txt-i txt-acc">ideas</span> to{" "}
+              <span class="txt-ul txt-i txt-acc">life</span> with robotics.
             </h1>
             <p class="txt-muted">
               Inspiring new{" "}
               <span class="txt-default">
                 generations of engineers since 2008
               </span>{" "}
-              <br></br> @ Westwood Highschool, Austin, TX.
+              <br class="desktop-only"></br> @ Westwood Highschool, Austin, TX.
             </p>
           </div>
         </div>
@@ -111,7 +112,7 @@ const App: Component = () => {
           <div class="flex col align-start g-4">
             <h1>
               We build <br></br>
-              <span id="about-txt" class="txt-primary">
+              <span class="txt-primary typed-text">
                 {word()}
               </span>
               .
