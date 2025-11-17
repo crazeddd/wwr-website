@@ -1,7 +1,12 @@
-FROM oven/bun:latest
+FROM node:18-alpine
 
-COPY package.json ./
-COPY bun.lockb ./
-COPY src ./
+WORKDIR /app
 
-RUN bun install
+COPY package.json package-lock.json ./
+RUN npm ci
+
+COPY src ./src
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
