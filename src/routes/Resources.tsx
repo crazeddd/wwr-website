@@ -13,11 +13,11 @@ const Robocamp: Component = () => {
         <div class="flex align-center justify-center item-center g-4">
           <div class="flex col justify-start txt-center g-4">
             <div>
-              <h1 class="title">
+              <h1>
                Resouces
               </h1>
-              <p class="txt-muted">
-                A directory of resources for new and returning robotics members.
+              <p class="txt-light">
+                Uhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
               </p>
             </div>
           </div>

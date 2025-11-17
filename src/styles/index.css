@@ -11,9 +11,10 @@
   --acc-t: #3d4f5d;
   --brand-discord: #7289da;
   --highlight: ;
-  --txt-dark: hsla(180, 1%, 80%, 0.8);
+  --txt-dark: hsla(0, 0%, 21%, 0.8);
+  --txt-light: hsla(0, 0%, 77%, 0.8);
   --txt: rgb(255, 255, 255);
-  --border: oklch(0.35 0 285.58);
+  --border: oklch(24.354% 0.00003 271.152);
   --safe: #2df598;
   --danger: #fd5656;
 }
@@ -289,6 +290,16 @@ section {
     grid-column-start: 2;
   }
 
+  & .item-center-left {
+    grid-row-start: 2;
+    grid-column-start: 1;
+  }
+
+  & .item-center-right {
+    grid-row-start: 2;
+    grid-column-start: 3;
+  }
+
   & .item-bottom-center {
     grid-row-start: 3;
     grid-column-start: 2;
@@ -419,13 +430,26 @@ button {
   flex-direction: column;
   width: 100%;
   max-width: 400px;
+  min-width: 200px;
   gap: 2rem;
   border-radius: 1rem;
   border: 1px solid var(--border);
   padding: 2rem;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 
   &.fill {
     max-width: 100%;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   }
 }
 
@@ -684,6 +708,10 @@ button {
 
 .txt-muted {
   color: var(--txt-dark);
+}
+
+.txt-light {
+  color: var(--txt-light);
 }
 
 .txt-primary {
@@ -1012,7 +1040,7 @@ button {
     grid-template-columns: 0.5fr 2fr 0.5fr;
     grid-template-rows: 5rem 1fr 5rem;
   }
-  
+
   .bg-grid {
     background-size: 10rem 10rem;
   }
@@ -1207,7 +1235,7 @@ button {
 
 #officers-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 1rem;
 }
 

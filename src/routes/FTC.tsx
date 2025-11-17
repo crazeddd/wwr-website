@@ -12,8 +12,8 @@ const FTC: Component = () => {
         <Nav />
         <div class="flex wrap align-center txt-center item-center g-4">
           <div class="flex col g-4">
-            <h1 class="title">FTC</h1>
-            <p class="txt-muted">
+            <h1>FTC</h1>
+            <p class="txt-light">
               <a class="txt-ul">FIRST Tech Challenge</a>, or FTC, is one of the
               programs we offer at Westwood Robotics. Our FTC program began in
               2019, and currently fosters 4 different teams.
@@ -58,3 +58,5 @@ const FTC: Component = () => {
     </>
   );
 };
+
+export default FTC;

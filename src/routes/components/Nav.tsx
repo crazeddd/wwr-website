@@ -16,11 +16,11 @@ const Nav: Component = () => {
           <div class="gap"></div> {/*lazy*/}
           <div class="items">
             <a class="flex g-2 align-center" href="/ftc">
-              <p class="txt-muted">FTC</p>
+              <p class="txt-light">FTC</p>
               <span class="badge secondary outline">Decode</span>
             </a>
             <a class="flex g-2 align-center" href="/frc">
-              <p class="txt-muted">FRC</p>
+              <p class="txt-light">FRC</p>
               <span class="badge secondary outline">Rebuilt</span>
             </a>
           </div>
@@ -29,9 +29,9 @@ const Nav: Component = () => {
           <button>Calenders {cheveron_down()}</button>
           <div class="gap"></div> {/*lazy*/}
           <div class="items">
-            <a class="txt-muted" href="/calendars/club">Club Calendar</a>
-            <a class="txt-muted" href="/calendars/ftc">FTC Calendar</a>
-            <a class="txt-muted" href="/calendars/frc">FRC Calendar</a>
+            <a class="txt-light" href="/calendars/club">Club Calendar</a>
+            <a class="txt-light" href="/calendars/ftc">FTC Calendar</a>
+            <a class="txt-light" href="/calendars/frc">FRC Calendar</a>
           </div>
         </div>
         <a href="/resources">Resources</a>

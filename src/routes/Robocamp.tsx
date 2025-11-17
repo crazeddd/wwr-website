@@ -13,8 +13,8 @@ const Robocamp: Component = () => {
         >
           <div class="flex col justify-start g-4">
             <div>
-              <h1 class="title">Robocamp 2026</h1>
-              <p class="txt-muted">Our fun robotics and STEM course.</p>
+              <h1>Robocamp 2026</h1>
+              <p class="txt-light">Our fun robotics and STEM course.</p>
             </div>
 
             <button class="primary">Apply Now!</button>

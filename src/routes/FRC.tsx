@@ -17,7 +17,7 @@ const FRC: Component = () => {
           <div class="flex col g-4">
             <div class="flex">
               <h1 id="frc-bg-txt">2583</h1>
-              <h1 class="title" id="frc-header">
+              <h1 id="frc-header">
                 Orange Dynamite
               </h1>
             </div>

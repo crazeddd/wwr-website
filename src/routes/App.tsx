@@ -2,7 +2,14 @@ import { createEffect, type Component } from "solid-js";
 
 import disarm2 from "/assets/DISARM_ANGLED.png";
 
-import aboutImage from "/assets/about2.jpg";
+import archit from "/assets/officers/archit.webp";
+import iris from "/assets/officers/iris.webp";
+import arhaan from "/assets/officers/arhaan.webp";
+import rayan from "/assets/officers/rayan.webp";
+import jining from "/assets/officers/jining.webp";
+import nerd from "/assets/officers/nerd.webp";
+import shrika from "/assets/officers/shrika.webp";
+import varun from "/assets/officers/varun.webp";
 
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
@@ -42,7 +49,7 @@ const App: Component = () => {
               Bringing <span class="txt-ul txt-i txt-acc">ideas</span> to{" "}
               <span class="txt-ul txt-i txt-acc">life</span> with robotics.
             </h1>
-            <p class="txt-muted">
+            <p class="txt-light">
               Inspiring new{" "}
               <span class="txt-default">
                 generations of engineers since 2008
@@ -117,7 +124,7 @@ const App: Component = () => {
               </span>
               .
             </h1>
-            <p>
+            <p class="txt-muted">
               Westwood Robotics is a student-led organization dedicated to
               fostering innovation, teamwork, and a passion for STEM. We
               participate in competitions, build mediocre robots, and work to
@@ -146,43 +153,67 @@ const App: Component = () => {
           </div>
       </section>  */}
 
-      {/* <section class="bg-light">
+      <section class="bg-light">
         <div class="item-center flex col g-4">
-          <h1>2026 Leadership</h1>
+          <h1>2026 <span class="txt-i txt-acc">Leadership</span></h1>
           <div id="officers-grid">
-            <div class="flex col b-all r-2 p-4">
+            <div class="card fill">
               <span class="badge outline">President</span>
-              <img class="circle" src={aboutImage} />
+              <img class="circle" src={iris} />
               <h5>Iris Chen</h5>
             </div>
-            <div class="flex col b-all r-2 p-4">
-              <span class="badge outline">President</span>
-              <img class="circle" src={aboutImage} />
-              <h5>Iris Chen</h5>
+            <div class="card fill">
+              <span class="badge outline">FRC Director</span>
+              <img class="circle" src={archit} />
+              <h5>Archit Garg</h5>
             </div>
-            <div class="flex col b-all r-2 p-4">
-              <span class="badge outline">President</span>
-              <img class="circle" src={aboutImage} />
-              <h5>Iris Chen</h5>
+            <div class="card fill">
+              <span class="badge outline">FTC Director</span>
+              <img class="circle" src={nerd} />
+              <h5>Aubrey Tipps</h5>
             </div>
-            <div class="flex col b-all r-2 p-4">
-              <span class="badge outline">President</span>
-              <img class="circle" src={aboutImage} />
-              <h5>Iris Chen</h5>
+            <div class="card fill">
+              <span class="badge outline">Event Director</span>
+              <img class="circle" src={varun} />
+              <h5>Varun Sanghavi</h5>
             </div>
-            <div class="flex col b-all r-2 p-4">
-              <span class="badge outline">President</span>
-              <img class="circle" src={aboutImage} />
-              <h5>Iris Chen</h5>
+            <div class="card fill">
+              <span class="badge outline">Director of Information</span>
+              <img class="circle" src={jining} />
+              <h5>Jining Liu</h5>
             </div>
-            <div class="flex col b-all r-2 p-4">
-              <span class="badge outline">President</span>
-              <img class="circle" src={aboutImage} />
-              <h5>Iris Chen</h5>
-            </div>  
+            <div class="card fill">
+              <span class="badge outline">Director of Finance</span>
+              <img class="circle" src={arhaan} />
+              <h5>Arhaan Jafri</h5>
+            </div>
+            <div class="card fill">
+              <span class="badge outline">Director of Outreach</span>
+              <img class="circle" src={rayan} />
+              <h5>Rayan Dange</h5>
+            </div>
+            <div class="card">
+              <span class="badge outline">FRC Assistant Director</span>
+              <img class="circle" src={shrika} />
+              <h5>Shrika Prakash</h5>
+            </div>
           </div>
         </div>
-      </section>  */}
+      </section>
+
+      <section class="bg-light">
+        <div class="item-center-left p-4">
+          <hr></hr>
+        </div>
+        <div class="flex col g-4 item-center">
+          <h1>Contact Us</h1>
+          <p class="txt-muted">
+            Interested in joining Westwood Robotics or sponsoring our org? Feel
+            free to reach out to us at any of our socials! 
+          </p>
+          <button class="primary">Get in Touch -{">"}</button>
+        </div>
+      </section>
       <Footer />
     </>
   );
