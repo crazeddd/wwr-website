@@ -1,6 +1,7 @@
+import { Component } from "solid-js";
 import { useNavigate } from "@solidjs/router";
 
-const NotFound = () => {
+const NotFound: Component = () => {
   const navigate = useNavigate();
 
   return (

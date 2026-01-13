@@ -1,4 +1,4 @@
-//Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.
+//Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.
 
 const logo = () => (
   <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280">

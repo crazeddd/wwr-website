@@ -1,4 +1,4 @@
-import { createEffect, type Component } from "solid-js";
+import { type Component } from "solid-js";
 
 import ftc from "/assets/ftc_2026.webp";
 
@@ -8,9 +8,9 @@ import Nav from "./components/Nav";
 const FTC: Component = () => {
   return (
     <>
-      <section id="hero" class="vh-100">
+      <section id="hero">
         <Nav />
-        <div class="flex wrap align-center txt-center item-center g-4">
+        <div class="flex wrap align-center txt-center item-center g-4 py-5">
           <div class="flex col g-4">
             <h1>FTC</h1>
             <p class="txt-light">
@@ -25,7 +25,7 @@ const FTC: Component = () => {
         </div>
       </section>
 
-      <section class="bg-light">
+      <section>
         <div class="item-top-center">
           <h1>
             <span class="txt-i txt-acc">2026</span> Teams

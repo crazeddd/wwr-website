@@ -8,19 +8,17 @@ const Robocamp: Component = () => {
     <>
       <section id="hero">
         <Nav />
-        <div
-          class="flex align-center justify-center item-center g-4"
-        >
-          <div class="flex col justify-start g-4">
+        <div class="item-center flex col txt-center align-center justify-center g-4 py-5">
             <div>
               <h1>Robocamp 2026</h1>
               <p class="txt-light">Our fun robotics and STEM course.</p>
             </div>
-
-            <button class="primary">Apply Now!</button>
-          </div>
+            <div class="flex col g-3">
+            <button class="outline">Applications closed</button>
+            <small>Applications will reopen in late <br/> Spring of 2026.</small>
+            </div>
           {/* <div>
-            <img id="disarm" src={disarm}/>
+            <img src="/imgs/robocamp.webp" class="r-2" alt="Robocamp 2024"/>
           </div> */}
         </div>
       </section>

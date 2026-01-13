@@ -30,11 +30,11 @@ const Nav: Component = () => {
           <div class="gap"></div> {/*lazy*/}
           <div class="items">
             <a class="txt-light" href="/calendars/club">Club Calendar</a>
-            <a class="txt-light" href="/calendars/ftc">FTC Calendar</a>
+            <a class="txt-light" href="/calendars/ftc">FTC Calendar</a> {/* unknown if we need 2 diff calendar pages */}
             <a class="txt-light" href="/calendars/frc">FRC Calendar</a>
           </div>
         </div>
-        <a href="/resources">Resources</a>
+        <a href="/our-team">Our Team</a>
         <a href="/robocamp">Robocamp</a>
       </div>
       <div class="flex justify-end align-center">
@@ -48,7 +48,9 @@ const Nav: Component = () => {
                 <a href="/ftc">FTC</a>
                 <a href="/frc">FRC</a>
                 <a href="/robocamp">Robocamp</a>
-                <a href="calendar">Calender</a>
+                <a href="/calendars/club">Club Calendar</a>
+                <a href="/calendars/ftc">FTC - FRC Calendar</a>
+                <a href="/resources">Resources</a>
               </div>
               <div>
                 <button onclick={() => setShowModal(false)}>✕</button>

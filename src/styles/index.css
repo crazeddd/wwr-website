@@ -3,17 +3,17 @@
 @import url("../fonts/stardom/stardom.css");
 
 :root {
-  --bg: oklch(0% 0 0);
+  --bg: oklch(14.958% 0.00002 271.152);
   --bg-light: #1c1e1e;
   --bg-acc: #10002b;
   --acc-p: #fb5607;
-  --acc-s: oklch(18.674% 0.00002 271.152);
+  --acc-s: oklch(17.764% 0.00002 271.152);
   --acc-t: #3d4f5d;
   --brand-discord: #7289da;
   --highlight: ;
-  --txt-dark: hsla(0, 0%, 21%, 0.8);
+  --txt-dark: hsla(0, 0%, 84%, 0.8);
   --txt-light: hsla(0, 0%, 77%, 0.8);
-  --txt: rgb(255, 255, 255);
+  --txt: rgba(255, 255, 255, 0.9);
   --border: oklch(24.354% 0.00003 271.152);
   --safe: #2df598;
   --danger: #fd5656;
@@ -219,6 +219,7 @@ nav {
   grid-template-columns: 1fr 2fr 1fr;
   padding: 1rem;
   width: 100%;
+  /* border-bottom: solid 1px var(--border); */
 
   & a {
     font-size: 0.8rem;
@@ -251,7 +252,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 4rem;
   width: 100%;
 
   & a {
@@ -273,7 +274,7 @@ section {
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 5rem 1fr 5rem;
+  grid-template-rows: 5rem 1fr 0;
 
   & .item-top {
     grid-column-start: 1;
@@ -435,11 +436,10 @@ button {
   border-radius: 1rem;
   border: 1px solid var(--border);
   padding: 2rem;
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.04) 1px,
-      transparent 1px
-    ),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background: var(--acc-s);
+  background-image: linear-gradient(rgba(44, 44, 44, 0.3) 1px,
+      transparent 1px),
+    linear-gradient(90deg, rgba(44, 44, 44, 0.3) 1px, transparent 1px);
   background-size: 40px 40px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 
@@ -509,7 +509,7 @@ button {
     transform: rotate(180deg);
   }
 
-  & .header:hover ~ .content {
+  & .header:hover~.content {
     max-height: 500px;
     margin-bottom: 1rem;
   }
@@ -580,18 +580,24 @@ button {
   grid-template-columns: repeat(30, 6rem);
   gap: 12rem;
   padding: 3rem 0;
-  background: var(--txt);
   overflow-x: clip;
   filter: grayscale(100%);
+  mask-image: linear-gradient(to bottom,
+      transparent 0%,
+      black 20px,
+      black calc(100% - 20px),
+      transparent 100%);
+  background-image: linear-gradient(rgba(44, 44, 44, 0.3) 1px,
+      transparent 1px),
+    linear-gradient(90deg, rgba(44, 44, 44, 0.3) 1px, transparent 1px);
+  background-size: 40px 40px;
 
   &::before,
   &::after {
     content: "";
-    background: linear-gradient(
-      to right,
-      var(--txt) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
+    background: linear-gradient(to right,
+        var(--bg) 0%,
+        rgba(255, 255, 255, 0) 100%);
     position: absolute;
     height: 100%;
     width: 20%;
@@ -609,8 +615,8 @@ button {
     top: 0;
   }
 
-  & > a {
-    animation: scroll 20s linear infinite;
+  &>a {
+    animation: scroll 25s linear infinite;
   }
 }
 
@@ -755,6 +761,7 @@ button {
 /* Flex stuff */
 .flex {
   display: flex;
+  position: relative;
 
   &.col {
     flex-direction: column;
@@ -1015,12 +1022,10 @@ button {
 /* Screen Sizes */
 
 /* Desktop / Large Screens */
-@media only screen and (max-width: 2800px) {
-}
+@media only screen and (max-width: 2800px) {}
 
 /* Laptop Screens */
-@media only screen and (max-width: 1400px) {
-}
+@media only screen and (max-width: 1400px) {}
 
 /* Mobile */
 @media only screen and (max-width: 900px) {
@@ -1037,12 +1042,12 @@ button {
   }
 
   section {
-    grid-template-columns: 0.5fr 2fr 0.5fr;
+    grid-template-columns: 0.35fr 2fr 0.35fr;
     grid-template-rows: 5rem 1fr 5rem;
   }
-
-  .bg-grid {
-    background-size: 10rem 10rem;
+  
+  .mobile-wrap {
+    flex-wrap: wrap;
   }
 }
 
@@ -1055,28 +1060,27 @@ button {
 .bg-grid {
   z-index: 0;
   position: absolute;
-  height: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
   width: 100%;
-  background-size: 19.99% 10rem;
-  background-image: linear-gradient(
-      to right,
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right,
       var(--border) 1px,
-      transparent 1px
-    ),
+      transparent 1px),
     linear-gradient(to bottom, var(--border) 1px, transparent 1px);
-  mask-image: radial-gradient(
-    ellipse at center,
-    rgba(0, 0, 0, 1) 25%,
-    transparent 73%
-  );
-  opacity: 0.15;
+  mask-image: radial-gradient(ellipse at center,
+      rgba(0, 0, 0, 1) 25%,
+      transparent 73%);
+  opacity: 0.9;
+  z-index: -1;
 }
 
 #hero {
   min-height: fit-content;
-  height: 100vh;
-  grid-template-rows: 0.5fr 5fr 0.5fr;
-  background-image: url("/assets/hero-bg.png");
+  grid-template-rows: 5rem 1fr 0;
+  /* background-image: url("/assets/hero-bg.png"); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 50px;
@@ -1088,16 +1092,28 @@ button {
 
 #disarm {
   max-width: 30rem;
-  min-width: 20rem;
   width: 100%;
-  opacity: 0.75;
-  transform: rotate(15deg);
 }
+
 #disarm2 {
-  max-width: 30rem;
-  width: 100%;
+  /* image-rendering: pixelated; */
+  max-width: 25rem;
+  /* width: 200%; */
   transform: scaleX(-1) rotate(15deg) translateX(5%);
+  animation: rotate 5s linear infinite;
 }
+
+/* @keyframes rotate {
+  0% {
+    transform: scaleX(-1) rotate(15deg) translateX(5%);
+  }
+  50% {
+    transform: scaleX(1) rotate(15deg) translateX(5%);
+  }
+  100% {
+    transform: scaleX(-1) rotate(15deg) translateX(5%);
+  }
+} */
 
 #disarm2::after {
   content: "";
@@ -1107,11 +1123,9 @@ button {
   transform: translateX(-50%) rotate(-15deg);
   width: min(100%, 32rem);
   height: 10px;
-  background: radial-gradient(
-    ellipse at center,
-    rgb(53, 53, 53) 0%,
-    transparent 80%
-  );
+  background: radial-gradient(ellipse at center,
+      rgb(53, 53, 53) 0%,
+      transparent 80%);
   filter: blur(10px);
   z-index: 0;
 }
@@ -1135,12 +1149,12 @@ button {
   }
 
   100% {
-    transform: translateX(calc((-6rem * 4) + (-12rem * 4)));
+    transform: translateX(calc((-6rem * 5) + (-12rem * 5)));
   }
 }
 
 .typed-text {
-  border-right: solid 1px var(--bg);
+  border-right: solid 1px var(--txt);
   animation: blink-caret 0.75s step-end infinite;
 }
 
@@ -1153,13 +1167,15 @@ button {
   }
 
   50% {
-    border-right-color: var(--bg);
+    border-right-color: var(--txt);
   }
 }
+
 .parallax {
   z-index: 99;
 }
-@keyframes parallax-1 {
+
+/* @keyframes parallax-1 {
   50% {
     opacity: 1;
     transform: translateY(0);
@@ -1170,6 +1186,7 @@ button {
     transform: translateY(-150px);
   }
 }
+
 @keyframes parallax-2 {
   10% {
     opacity: 1;
@@ -1180,6 +1197,7 @@ button {
     opacity: 0;
     transform: translateY(-150px);
   }
+
   100% {
     opacity: 0;
     transform: translateY(-150px);
@@ -1188,7 +1206,7 @@ button {
 
 @media (prefers-reduced-motion: no-preference) {
   @supports (animation-timeline: scroll()) {
-    #hero > .bottom-left {
+    #hero>.bottom-left {
       animation: parallax-2 ease-in-out both;
       animation-timeline: view(y auto);
     }
@@ -1203,7 +1221,7 @@ button {
       animation-timeline: view(y auto);
     }
   }
-}
+} */
 
 /* FTC */
 .team {
@@ -1254,13 +1272,11 @@ button {
   }
 }
 
-#frc-bg-txt {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  color: transparent;
-  -webkit-text-stroke: 2px rgba(239, 239, 239, 0.5);
-  z-index: -1;
-  font-size: 15vw;
+#cover {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999;
 }
