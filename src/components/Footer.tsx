@@ -3,8 +3,8 @@ import type { Component } from "solid-js";
 const Footer: Component = () => {
   return (
     <footer>
-        <p>©2026 Westwood Robotics</p>
-        <a>All rights reserved.</a>
+        <small>©2026 Westwood Robotics</small>
+        <small class="txt-light">All rights reserved.</small>
     </footer>
   );
 };

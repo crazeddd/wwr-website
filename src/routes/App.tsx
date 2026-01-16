@@ -2,14 +2,14 @@ import { createEffect, type Component } from "solid-js";
 
 import disarm2 from "/imgs/DISARM_ANGLED.png";
 
-import Footer from "./components/Footer";
-import Nav from "./components/Nav";
-import Cover from "./components/Cover";
+import Footer from "../components/Footer";
+import Nav from "../components/Nav";
+import Cover from "../components/Cover";
 
 import { typeWriter } from "../utils/typeWriter";
 
 const App: Component = () => {
-  const wordList = ["Robots", "Memories", "Solutions"];
+  const wordList = ["Robots", "Memories", "Leaders"];
   const { word, typeWord, deleteWord, clearWord } = typeWriter(200, 150);
 
   createEffect(async () => {
@@ -28,9 +28,7 @@ const App: Component = () => {
       {/* <Cover /> */}
       <section id="hero">
         <Nav />
-        <div
-          class="flex align-center justify-center txt-center item-center"
-        >
+        <div class="flex align-center justify-center txt-center item-center">
           <div class="flex col align-center justify-center g-4 py-5">
             <div>
               <span class="badge primary">v0.1.0 -{">"}</span>
@@ -149,8 +147,7 @@ const App: Component = () => {
                 </p>
               </div>
             </div>
-            <div class="flex p-4 r-2 b-all w-100">
-            </div>
+            <div class="flex p-4 r-2 b-all w-100"></div>
           </div>
           <div class="flex align-center justify-center p-4 r-2 b-all">
             <div class="bg-grid"></div>
@@ -174,20 +171,48 @@ const App: Component = () => {
             </div>
           </div>
       </section>  */}
+      <section>
+        <div class="item-center flex col g-4">
+          <h1>Our <span class="txt-acc txt-i txt-ul">Programs</span></h1>
+          <div class="flex wrap g-3">
+            <a href="/FRC" class="p-4 b-all r-2 w-100">
+              <p class="txt-primary">{"->"}</p>
+              <h2>FRC</h2>
+              <small class="txt-light">FIRST® Robotics Competition</small>
+            </a>
+            <a href="/FTC" class="p-4 b-all r-2 w-100">
+              <p class="txt-primary">{"->"}</p>
+              <h2>FTC</h2>
+              <small class="txt-light">FIRST® Tech Challenge</small>
+            </a>
+            <a href="/Robocamp" class="p-4 b-all r-2 w-100">
+              <p class="txt-primary">{"->"}</p>
+              <h2>Robocamp</h2>
+              <small class="txt-light">Summer Robotics & STEM Camp</small>
+            </a>
+          </div>
+        </div>
+      </section>
 
-      {/* <section class="">
+      <section class="">
         <div class="item-center-left p-4">
           <hr></hr>
         </div>
-        <div class="flex col g-4 item-center">
-          <h1>Contact Us</h1>
+        <div class="item-center-right p-4">
+          <hr></hr>
+        </div>
+        <div class="flex col g-4 item-center justify-center align-center txt-center">
+          <h1>
+            Contact <span class="txt-acc txt-i txt-ul">Us</span>
+          </h1>
           <p class="txt-muted">
-            Interested in joining Westwood Robotics or sponsoring our org? Feel
-            free to reach out to us at any of our socials!
+            Interested in joining Westwood Robotics or sponsoring our org?
+            <br />
+            Feel free to reach out to us at any of our socials!
           </p>
           <button class="primary">Get in Touch -{">"}</button>
         </div>
-      </section> */}
+      </section>
       <Footer />
     </>
   );

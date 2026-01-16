@@ -1,6 +1,6 @@
 import { createSignal, type Component } from "solid-js";
 
-import { logo, menu, cheveron_down } from "../../icons";
+import { logo, menu, cheveron_down, close } from "../icons";
 
 const Nav: Component = () => {
   const [showModal, setShowModal] = createSignal(false);
@@ -29,9 +29,16 @@ const Nav: Component = () => {
           <button>Calenders {cheveron_down()}</button>
           <div class="gap"></div> {/*lazy*/}
           <div class="items">
-            <a class="txt-light" href="/calendars/club">Club Calendar</a>
-            <a class="txt-light" href="/calendars/ftc">FTC Calendar</a> {/* unknown if we need 2 diff calendar pages */}
-            <a class="txt-light" href="/calendars/frc">FRC Calendar</a>
+            <a class="txt-light" href="/calendars/club">
+              Club Calendar
+            </a>
+            <a class="txt-light" href="/calendars/ftc">
+              FTC Calendar
+            </a>{" "}
+            {/* unknown if we need 2 diff calendar pages */}
+            <a class="txt-light" href="/calendars/frc">
+              FRC Calendar
+            </a>
           </div>
         </div>
         <a href="/our-team">Our Team</a>
@@ -44,16 +51,30 @@ const Nav: Component = () => {
         <div class="modal">
           <div class="content">
             <div class="flex justify-between">
-              <div class="flex col g-2">
-                <a href="/ftc">FTC</a>
-                <a href="/frc">FRC</a>
-                <a href="/robocamp">Robocamp</a>
-                <a href="/calendars/club">Club Calendar</a>
-                <a href="/calendars/ftc">FTC - FRC Calendar</a>
-                <a href="/resources">Resources</a>
+              <div class="flex col g-3">
+                <p>Misc</p>
+                <div class="flex col g-1 txt-light">
+                  <a href="/">Home</a>
+                  <a href="/our-team">Our Team</a>
+                  <a href="/resources">Resources</a>
+                </div>
+
+                <p>Programs</p>
+                <div class="flex col g-1 txt-light">
+                  <a href="/ftc">FTC</a>
+                  <a href="/frc">FRC</a>
+                  <a href="/robocamp">Robocamp</a>
+                </div>
+
+                <p>Calendars</p>
+                <div class="flex col g-1 txt-light">
+                  <a href="/calendars/club">Club Calendar</a>
+                  <a href="/calendars/ftc">FTC Calendar</a>
+                  <a href="/calendars/frc">FRC Calendar</a>
+                </div>
               </div>
               <div>
-                <button onclick={() => setShowModal(false)}>✕</button>
+                <button onclick={() => setShowModal(false)}>{close}</button>
               </div>
             </div>
           </div>

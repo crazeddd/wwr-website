@@ -2,8 +2,8 @@ import { type Component } from "solid-js";
 
 import ftc from "/assets/ftc_2026.webp";
 
-import Footer from "./components/Footer";
-import Nav from "./components/Nav";
+import Footer from "../components/Footer";
+import Nav from "../components/Nav";
 
 const FTC: Component = () => {
   return (
@@ -14,7 +14,7 @@ const FTC: Component = () => {
           <div class="flex col g-4">
             <h1>FTC</h1>
             <p class="txt-light">
-              <a class="txt-ul">FIRST Tech Challenge</a>, or FTC, is one of the
+              <a href="https://www.firstinspires.org/robotics/ftc" target="_blank" class="txt-ul">FIRST® Tech Challenge</a>, or FTC, is one of the
               programs we offer at Westwood Robotics. Our FTC program began in
               2019, and currently fosters 4 different teams.
             </p>
@@ -31,7 +31,7 @@ const FTC: Component = () => {
             <span class="txt-i txt-acc">2026</span> Teams
           </h1>
         </div>
-        <div class="flex col g-5 item-center">
+        <div class="flex col g-4 item-center">
           <div class="team">
             <img src="https://upload.wikimedia.org/wikipedia/en/a/a2/FIRST_Logo.svg" />
             <h2>Slingshot</h2>

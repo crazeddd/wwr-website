@@ -1,7 +1,7 @@
 import type { Component } from "solid-js";
 
-import Footer from "./components/Footer";
-import Nav from "./components/Nav";
+import Footer from "../components/Footer";
+import Nav from "../components/Nav";
 
 import { ref } from "../icons";
 

@@ -2,17 +2,15 @@ import type { Component } from "solid-js";
 
 import disarm from "/imgs/DISARM_SIDEWAYS.png";
 
-import Footer from "./components/Footer";
-import Nav from "./components/Nav";
+import Footer from "../components/Footer";
+import Nav from "../components/Nav";
 
 const FRC: Component = () => {
   return (
     <>
       <section id="hero">
         <Nav />
-        <div
-          class="flex align-center justify-center txt-center item-center b-all r-2 g-4"
-        >
+        <div class="flex align-center justify-center txt-center item-center b-all r-2 g-4">
           <div class="bg-grid"></div>
           <div class="flex col g-4">
             <div class="flex col py-5">
@@ -25,7 +23,7 @@ const FRC: Component = () => {
       <section>
         <div class="item-center txt-center">
           <p>
-            Orange Dynamite (team 2583), is our FRC (FIRST Robotics Competition)
+            Orange Dynamite (team 2583), is our FRC (<a href="https://www.firstinspires.org/robotics/frc" target="_blank" class="txt-ul">FIRST® Robotics Competition</a>)
             team at Westwood Robotics. We've participated in FRC since 2008, and
             have gone from working in a cramped garage to having our own
             workshop and class in Westwood High School. In the offseason, we

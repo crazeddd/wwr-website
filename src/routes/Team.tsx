@@ -1,7 +1,7 @@
 import { Component } from "solid-js";
 
-import Footer from "./components/Footer";
-import Nav from "./components/Nav";
+import Footer from "../components/Footer";
+import Nav from "../components/Nav";
 
 import { cheveron_down } from "../icons";
 
@@ -29,7 +29,7 @@ const Team: Component = () => {
       <section>
         <div class="item-top-center flex justify-between align-center w-100">
           <h2>
-            2026 <span class="txt-i txt-acc">Leadership</span>
+            2026 <span class="txt-i txt-acc">Officers</span>
           </h2>
           <div class="dropdown">
             <button class="outline">2026 {cheveron_down()}</button>

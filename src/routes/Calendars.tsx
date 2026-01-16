@@ -1,8 +1,8 @@
 import { Component } from "solid-js";
 import { useLocation } from "@solidjs/router";
 
-import Nav from "./components/Nav";
-import Footer from "./components/Footer";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 
 const Calendars: Component = () => {
   const location = useLocation();
