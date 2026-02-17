@@ -7,6 +7,8 @@ import Nav from "../components/Nav";
 import Cover from "../components/Cover";
 
 import { typeWriter } from "../utils/typeWriter";
+import { insta, youtube } from "../icons";
+import { instagram_url, youtube_url, email } from "../../config.json";
 
 const App: Component = () => {
   const wordList = ["Robots", "Memories", "Leaders"];
@@ -30,7 +32,9 @@ const App: Component = () => {
         <Nav />
         <div class="flex align-center justify-center txt-center item-center">
           <div class="flex col align-center justify-center g-4 py-5">
-            <div>
+            <div class="flex g-2">
+              <a href={instagram_url} target="_blank"><span class="badge outline">{insta()}</span></a>
+              <a href={youtube_url} target="_blank"><span class="badge outline">{youtube()}</span></a>
               <span class="badge primary">v0.1.0 -{">"}</span>
             </div>
             <h1>
@@ -47,6 +51,7 @@ const App: Component = () => {
           </div>
         </div>
       </section>
+      {/* consider moving carousel to its own component */}
       <div class="infinite-carousel">
         <a href="https://www.firstinspires.org/" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/en/a/a2/FIRST_Logo.svg" />
@@ -132,13 +137,16 @@ const App: Component = () => {
         {/* <div class="bg-grid"></div> */}
         <div class="flex col g-3 item-center z-1">
           <div class="flex g-3 mobile-wrap">
-            <div class="bg-secondary p-4 r-2 b-all">
+            <div class="py-4 r-2">
               <div class="flex col g-4">
-                <h2>
-                  We build
-                  <br />
-                  <span class="txt-primary typed-text">{word()}</span>.
-                </h2>
+                <div class="flex justify-between">
+                  <h2>
+                    We build
+                    <br />
+                    <span class="txt-primary typed-text">{word()}</span>.
+                  </h2>
+                  
+                </div>
                 <p class="txt-light">
                   Westwood Robotics is a student-led organization dedicated to
                   fostering innovation, teamwork, and a passion for STEM. We
@@ -147,10 +155,13 @@ const App: Component = () => {
                 </p>
               </div>
             </div>
-            <div class="flex p-4 r-2 b-all w-100"></div>
+            <div
+              class="flex p-4 r-2 b-all w-100"
+              style={"display: none;"}
+            ></div>
           </div>
           <div class="flex align-center justify-center p-4 r-2 b-all">
-            <div class="bg-grid"></div>
+            {/* <div class="bg-grid"></div> */}
             <div id="disarm2">
               <img src={disarm2}></img>
             </div>
@@ -172,20 +183,24 @@ const App: Component = () => {
           </div>
       </section>  */}
       <section>
+        <div class="item-top-center">
+          <h1>
+            Our <span class="txt-acc txt-i">Programs</span>
+          </h1>
+        </div>
         <div class="item-center flex col g-4">
-          <h1>Our <span class="txt-acc txt-i txt-ul">Programs</span></h1>
-          <div class="flex wrap g-3">
-            <a href="/FRC" class="p-4 b-all r-2 w-100">
+          <div class="flex justify-between wrap g-3">
+            <a href="/FRC" class="p-4 r-2">
               <p class="txt-primary">{"->"}</p>
               <h2>FRC</h2>
               <small class="txt-light">FIRST® Robotics Competition</small>
             </a>
-            <a href="/FTC" class="p-4 b-all r-2 w-100">
+            <a href="/FTC" class="p-4 r-2">
               <p class="txt-primary">{"->"}</p>
               <h2>FTC</h2>
               <small class="txt-light">FIRST® Tech Challenge</small>
             </a>
-            <a href="/Robocamp" class="p-4 b-all r-2 w-100">
+            <a href="/Robocamp" class="p-4 r-2">
               <p class="txt-primary">{"->"}</p>
               <h2>Robocamp</h2>
               <small class="txt-light">Summer Robotics & STEM Camp</small>
@@ -201,7 +216,7 @@ const App: Component = () => {
         <div class="item-center-right p-4">
           <hr></hr>
         </div>
-        <div class="flex col g-4 item-center justify-center align-center txt-center">
+        <div class="flex col b-all p-4 r-2 g-4 item-center justify-center align-center txt-center">
           <h1>
             Contact <span class="txt-acc txt-i txt-ul">Us</span>
           </h1>
@@ -210,9 +225,10 @@ const App: Component = () => {
             <br />
             Feel free to reach out to us at any of our socials!
           </p>
-          <button class="primary">Get in Touch -{">"}</button>
+          <a class="button primary" href={`mailto:${email}`}>Get in Touch -{">"}</a>
         </div>
       </section>
+
       <Footer />
     </>
   );

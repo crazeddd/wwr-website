@@ -74,7 +74,7 @@ const Nav: Component = () => {
                 </div>
               </div>
               <div>
-                <button onclick={() => setShowModal(false)}>{close}</button>
+                <button onclick={() => setShowModal(false)}>{close()}</button>
               </div>
             </div>
           </div>

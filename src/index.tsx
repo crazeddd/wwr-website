@@ -5,7 +5,7 @@ import { Router, Route } from "@solidjs/router";
 import "./styles/index.css";
 
 import NotFound from "./routes/NotFound";
-import App from "./routes/App";
+import Index from "./routes/Index";
 import FRC from "./routes/FRC";
 import FTC from "./routes/FTC";
 import Robocamp from "./routes/Robocamp";
@@ -24,7 +24,7 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
 render(
   () => (
     <Router>
-      <Route path="/" component={App} />
+      <Route path="/" component={Index} />
       <Route path="/frc" component={FRC} />
       <Route path="/ftc" component={FTC} />
       <Route path="/robocamp" component={Robocamp} />

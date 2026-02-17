@@ -9,7 +9,6 @@
   --acc-p: #fb5607;
   --acc-s: oklch(17.764% 0.00002 271.152);
   --acc-t: #3d4f5d;
-  --brand-discord: #7289da;
   --highlight: ;
   --txt-dark: hsla(0, 0%, 84%, 0.8);
   --txt-light: hsla(0, 0%, 77%, 0.8);
@@ -252,7 +251,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4rem 0 2rem 0;
+  padding: 2rem 0 2rem 0;
   width: 100%;
 
   & a {
@@ -274,7 +273,8 @@ section {
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: min-content 1fr 0;
+  grid-template-rows: min-content 1fr min-content;
+  margin: 5rem 0;
 
   & .item-top {
     grid-column-start: 1;
@@ -1022,10 +1022,20 @@ button {
 /* Screen Sizes */
 
 /* Desktop / Large Screens */
-@media only screen and (max-width: 2800px) {}
+@media only screen and (max-width: 2800px) {
+  section {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 8rem 0;
+  }
+}
 
 /* Laptop Screens */
-@media only screen and (max-width: 1400px) {}
+@media only screen and (max-width: 1400px) {
+  section {
+    grid-template-columns: 1fr 2fr 1fr;
+    margin: 6rem 0;
+  }
+}
 
 /* Mobile */
 @media only screen and (max-width: 900px) {
@@ -1080,14 +1090,6 @@ button {
 #hero {
   min-height: fit-content;
   grid-template-rows: 5rem 1fr 0;
-  /* background-image: url("/assets/hero-bg.png"); */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center 50px;
-
-  /* mask-image: radial-gradient(circle at center,
-      rgba(0, 0, 0, 1) 50%,
-      transparent 90%);  */
 }
 
 #disarm {
@@ -1222,6 +1224,11 @@ button {
     }
   }
 } */
+
+
+section#hero {
+  margin: 0;
+}
 
 /* FTC */
 .team {
