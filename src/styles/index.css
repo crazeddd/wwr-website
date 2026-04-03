@@ -272,8 +272,8 @@ section {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: min-content 1fr min-content;
+  grid-template-columns: 1fr 100% 1fr;
+  grid-template-rows: min-content 100% min-content;
   margin: 5rem 0;
 
   & .item-top {

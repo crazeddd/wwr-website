@@ -23,6 +23,9 @@ const Nav: Component = () => {
               <p class="txt-light">FRC</p>
               <span class="badge secondary outline">Rebuilt</span>
             </a>
+            <a class="flex g-2 align-center" href="/outreach">
+              <p class="txt-light">Outreach</p>
+            </a>
           </div>
         </div>
         <div class="dropdown">
@@ -63,6 +66,7 @@ const Nav: Component = () => {
                 <div class="flex col g-1 txt-light">
                   <a href="/ftc">FTC</a>
                   <a href="/frc">FRC</a>
+                  <a href="/outreach">Outreach</a>
                   <a href="/robocamp">Robocamp</a>
                 </div>
 

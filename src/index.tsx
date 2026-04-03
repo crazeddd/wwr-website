@@ -12,6 +12,7 @@ import Robocamp from "./routes/Robocamp";
 import Resources from "./routes/Resources";
 import Calendars from "./routes/Calendars";
 import Team from "./routes/Team";
+import Outreach from "./routes/Outreach";
 
 const root = document.getElementById("root");
 
@@ -28,6 +29,7 @@ render(
       <Route path="/frc" component={FRC} />
       <Route path="/ftc" component={FTC} />
       <Route path="/robocamp" component={Robocamp} />
+      <Route path="/outreach" component={Outreach} />
       <Route path="/our-team" component={Team} />
       <Route path="/resources" component={Resources} />
       <Route path="/calendars/:type" component={Calendars} />

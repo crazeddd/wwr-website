@@ -5,14 +5,20 @@ import Nav from "../components/Nav";
 
 import { cheveron_down } from "../icons";
 
-import archit from "/officers/archit.webp";
-import iris from "/officers/iris.webp";
-import arhaan from "/officers/arhaan.webp";
-import rayan from "/officers/rayan.webp";
-import jining from "/officers/jining.webp";
-import nerd from "/officers/nerd.webp";
-import shrika from "/officers/shrika.webp";
-import varun from "/officers/varun.webp";
+import archit from "/imgs/officers/archit.webp";
+import iris from "/imgs/officers/iris.webp";
+import arhaan from "/imgs/officers/arhaan.webp";
+import rayan from "/imgs/officers/rayan.webp";
+import jining from "/imgs/officers/jining.webp";
+import nerd from "/imgs/officers/nerd.webp";
+import shrika from "/imgs/officers/shrika.webp";
+import varun from "/imgs/officers/varun.webp";
+
+import manisha from "/imgs/booster/manisha.webp";
+import meha from "/imgs/booster/meha.webp";
+import sheri from "/imgs/booster/sheri.webp";
+import shilpa from "/imgs/booster/shilpa.webp";
+import sridevi from "/imgs/booster/sridevi.webp";
 
 const Team: Component = () => {
   return (
@@ -111,23 +117,28 @@ const Team: Component = () => {
           <div id="officers-grid">
             <div class="card fill">
               <span class="badge outline">President</span>
-              <img class="circle" src={iris} />
-              <h5>Iris Chen</h5>
+              <img class="circle" src={manisha} />
+              <h5>Manisha Gupta</h5>
             </div>
             <div class="card fill">
-              <span class="badge outline">FRC Director</span>
-              <img class="circle" src={archit} />
-              <h5>Archit Garg</h5>
+              <span class="badge outline">Vice President</span>
+              <img class="circle" src={sridevi} />
+              <h5>Sridevi Thambi</h5>
             </div>
             <div class="card fill">
-              <span class="badge outline">FTC Director</span>
-              <img class="circle" src={nerd} />
-              <h5>Aubrey Tipps</h5>
+              <span class="badge outline">Treasurer</span>
+              <img class="circle" src={shilpa} />
+              <h5>Shilpa Malpani</h5>
             </div>
             <div class="card fill">
-              <span class="badge outline">Event Director</span>
-              <img class="circle" src={varun} />
-              <h5>Varun Sanghavi</h5>
+              <span class="badge outline">Secretary</span>
+              <img class="circle" src={meha} />
+              <h5>Meha Parikh</h5>
+            </div>
+            <div class="card fill">
+              <span class="badge outline">FTC Coordinator</span>
+              <img class="circle" src={sheri} />
+              <h5>Sheri Sundstrom</h5>
             </div>
           </div>
         </div>

@@ -35,7 +35,9 @@ const App: Component = () => {
             <div class="flex g-2">
               <a href={instagram_url} target="_blank"><span class="badge outline">{insta()}</span></a>
               <a href={youtube_url} target="_blank"><span class="badge outline">{youtube()}</span></a>
-              <span class="badge primary">v0.1.0 -{">"}</span>
+              <a href="https://github.com/WestwoodRobotics/WR-Website" target="_blank">
+                <span class="badge primary">v0.1.0 -{">"}</span>
+              </a>
             </div>
             <h1>
               Bringing <span class="txt-ul txt-i txt-acc">ideas</span> to{" "}
@@ -61,10 +63,10 @@ const App: Component = () => {
           style="filter: invert(100%);"
           target="_blank"
         >
-          <img src="/sponsors/fabworks.avif" />
+          <img src="/imgs/sponsors/fabworks.avif" />
         </a>
         <a href="https://www.baesystems.com/" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/BAE_Systems_logo.svg/2560px-BAE_Systems_logo.svg.png" />
+          <img src="/imgs/sponsors/BAE.svg" />
         </a>
         <a href="https://www.ptc.com/" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/PTC_logo.svg" />
@@ -81,10 +83,10 @@ const App: Component = () => {
           style="filter: invert(100%);"
           target="_blank"
         >
-          <img src="/sponsors/fabworks.avif" />
+          <img src="/imgs/sponsors/fabworks.avif" />
         </a>
         <a href="https://www.baesystems.com/" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/BAE_Systems_logo.svg/2560px-BAE_Systems_logo.svg.png" />
+          <img src="/imgs/sponsors/BAE.svg" />
         </a>
         <a href="https://www.ptc.com/" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/PTC_logo.svg" />
@@ -101,10 +103,10 @@ const App: Component = () => {
           style="filter: invert(100%);"
           target="_blank"
         >
-          <img src="/sponsors/fabworks.avif" />
+          <img src="/imgs/sponsors/fabworks.avif" />
         </a>
         <a href="https://www.baesystems.com/" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/BAE_Systems_logo.svg/2560px-BAE_Systems_logo.svg.png" />
+          <img src="/imgs/sponsors/BAE.svg" />
         </a>
         <a href="https://www.ptc.com/" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/PTC_logo.svg" />
@@ -121,10 +123,10 @@ const App: Component = () => {
           style="filter: invert(100%);"
           target="_blank"
         >
-          <img src="/sponsors/fabworks.avif" />
+          <img src="/imgs/sponsors/fabworks.avif" />
         </a>
         <a href="https://www.baesystems.com/" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/BAE_Systems_logo.svg/2560px-BAE_Systems_logo.svg.png" />
+          <img src="/imgs/sponsors/BAE.svg" />
         </a>
         <a href="https://www.ptc.com/" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/PTC_logo.svg" />
